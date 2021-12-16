@@ -8,7 +8,7 @@ coffee_maker_menu = Menu()
 coffee_menu = coffee_maker_menu.coffee_menu
 resources = coffee_maker_menu.resources
 
-calculate_coffee = Calculate(resources ,coffee_menu)
+calculate_coffee = Calculate(resources, coffee_menu)
 calculate_coins = Coins()
 
 should_continue = True
@@ -21,7 +21,7 @@ while should_continue:
         calculate_coffee.show_report()
     else:
         calculate_coffee.make = your_option
-        #check for resources
+        # check for resources
         can_make_coffee = calculate_coffee.check_resources()
         if can_make_coffee:
             calculate_coins.quarter = int(input("How Many Quarters (1 Quarter = $0.25)?  "))
@@ -37,8 +37,3 @@ while should_continue:
                 print(f"Here's your Change $ {change}")
             else:
                 print("You don't have enough money to make coffee ")
-
-
-
-
-
